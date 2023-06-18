@@ -33,10 +33,9 @@ public class seminar3 {
         }
         System.out.println(numb);
         System.out.println("список нечетных чисел");
-        for (Integer number: numb){
-            if (number % 2 == 0){
-                numb.remove(number);
-
+        for (Iterator<Integer> it = numb.iterator(); it.hasNext();){
+            if (0 == (it.next()&1)){
+                it.remove();
             }
 //               for (Iterator<Integer> iterator = numb.iterator(); iterator.hasNext();){
 //            Integer numb = iterator.next();
