@@ -34,7 +34,7 @@ public class seminar3 {
         System.out.println(numb);
         System.out.println("список нечетных чисел");
         for (Iterator<Integer> it = numb.iterator(); it.hasNext();){
-            if (0 == (it.next()&1)){
+            if (0 == (it.next()%2)){
                 it.remove();
             }
 //               for (Iterator<Integer> iterator = numb.iterator(); iterator.hasNext();){
@@ -44,6 +44,18 @@ public class seminar3 {
 //                iterator.remove();
 //            }
         }System.out.println(numb);
+        int max = 0;
+        for (int j : numb){
+            if (j > max){
+                max = j;
+            }
+        }System.out.println("макимальное число "+ max);
+        int min = numb.get(0);
+        for (int j : numb){
+            if (j < min){
+                min = j;
+            }
+        }System.out.println("минимальное число "+ min);
     }
 }
 
